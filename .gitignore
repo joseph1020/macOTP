@@ -1,0 +1,4 @@
+.build/
+.swiftpm/
+.omx/
+.DS_Store

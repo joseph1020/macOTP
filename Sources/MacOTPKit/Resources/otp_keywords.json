@@ -1,0 +1,29 @@
+{
+  "otp_keywords": [
+    "otp",
+    "one-time password",
+    "one-time passcode",
+    "verification code",
+    "authentication code",
+    "security code",
+    "activation code"
+  ],
+  "action_keywords": [
+    "verify",
+    "verification",
+    "authenticate",
+    "activate",
+    "login",
+    "sign in",
+    "confirm"
+  ],
+  "korean_keywords": [
+    "인증번호",
+    "인증 코드",
+    "확인 코드",
+    "보안 코드",
+    "일회용 비밀번호",
+    "일회용 코드",
+    "패스코드"
+  ]
+}
