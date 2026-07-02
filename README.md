@@ -5,23 +5,31 @@
 [![Swift](https://img.shields.io/badge/Swift-6-orange.svg)](https://swift.org)
 [![macOS](https://img.shields.io/badge/macOS-15%2B-blue.svg)](https://developer.apple.com/macos/)
 
-macOTP is a local macOS command-line tool for finding recent one-time passwords
-in Apple Messages. It reads the local Messages database in read-only mode,
+macOTP is a privacy-first, local-only CLI for extracting one-time passwords (OTPs)
+from Apple Messages.It reads the local Messages database in read-only mode,
 extracts likely OTP codes from message text or Apple Messages attributed body
 metadata, and prints or copies the matching code.
 
-## Privacy and security model
+### Features
 
-- Local-only processing: all scanning and extraction run on the Mac where the
-  command is executed.
-- No telemetry: macOTP does not collect analytics, usage events, crash reports,
-  or diagnostics.
-- No network communication: macOTP does not make HTTP requests, open sockets, or
-  call remote services.
-- No OTP storage: extracted OTP values are not written to disk by macOTP.
-- Read-only Messages access: the Messages database is opened read-only.
-- Sanitized debug output: debug lines are intended to report metadata and
-  lengths without printing OTP message bodies.
+- Extract OTPs from Apple Messages
+- Local-only processing
+- Read-only Messages database access
+- Clipboard support (`--copy`)
+- JSON output (`--json`)
+- Apple `attributedBody` support
+- No telemetry or network communication
+
+## Privacy and Security
+
+macOTP is designed around a privacy-first, local-only architecture.
+
+- All processing is performed locally on your Mac.
+- The Messages database is opened in read-only mode.
+- No telemetry or analytics are collected.
+- No network communication is performed.
+- OTP values are not stored by macOTP.
+- Debug output is sanitized to avoid exposing message contents.
 
 ## Requirements
 
