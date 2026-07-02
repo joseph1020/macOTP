@@ -6,7 +6,7 @@
 [![macOS](https://img.shields.io/badge/macOS-15%2B-blue.svg)](https://developer.apple.com/macos/)
 
 macOTP is a privacy-first, local-only CLI for extracting one-time passwords (OTPs)
-from Apple Messages.It reads the local Messages database in read-only mode,
+from Apple Messages. It reads the local Messages database in read-only mode,
 extracts likely OTP codes from message text or Apple Messages attributed body
 metadata, and prints or copies the matching code.
 
