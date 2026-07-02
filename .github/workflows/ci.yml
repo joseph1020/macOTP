@@ -33,7 +33,10 @@ jobs:
       - name: Selfcheck
         run: scripts/selfcheck.sh
 
-      - name: Ensure no generated reports are tracked
+      - name: Clean generated reports
+        run: rm -rf reports .build .omx
+
+      - name: Ensure no generated artifacts are tracked
         run: |
           git status --short
           test -z "$(git status --short -- reports .build .omx)"
