@@ -1,5 +1,10 @@
 # macOTP
 
+[![CI](https://github.com/joseph1020/macOTP/actions/workflows/ci.yml/badge.svg)](https://github.com/joseph1020/macOTP/actions/workflows/ci.yml)
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Swift](https://img.shields.io/badge/Swift-6-orange.svg)](https://swift.org)
+[![macOS](https://img.shields.io/badge/macOS-15%2B-blue.svg)](https://developer.apple.com/macos/)
+
 macOTP is a local macOS command-line tool for finding recent one-time passwords
 in Apple Messages. It reads the local Messages database in read-only mode,
 extracts likely OTP codes from message text or Apple Messages attributed body
