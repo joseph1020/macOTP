@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-check:
+    name: Build and check
+    runs-on: macos-15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Swift version
+        run: swift --version
+
+      - name: Build
+        run: swift build
+
+      - name: Swift test
+        run: swift test
+
+      - name: Selftest
+        run: swift run macotp-selftest
+
+      - name: Selfcheck
+        run: scripts/selfcheck.sh
+
+      - name: Ensure no generated reports are tracked
+        run: |
+          git status --short
+          test -z "$(git status --short -- reports .build .omx)"
